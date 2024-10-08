@@ -1,0 +1,46 @@
+.carousel_radio {
+    display: none;
+}
+.carousel .carousel_item img{
+    width: 50%;
+    height: 25rem;
+}
+.carousel_item {
+    display: none;
+    text-align: center;
+}
+.carousel_radio:nth-child(1):checked ~ .carousel .carousel_item:nth-child(1),
+.carousel_radio:nth-child(2):checked ~ .carousel .carousel_item:nth-child(2),
+.carousel_radio:nth-child(3):checked ~ .carousel .carousel_item:nth-child(3)
+{
+    display: block;
+}
+
+.carousel_dots .carousel_dot:hover,
+.carousel_radio:nth-child(1):checked ~ .carousel .carousel_dots .carousel_dot:nth-child(1),
+.carousel_radio:nth-child(2):checked ~ .carousel .carousel_dots .carousel_dot:nth-child(2),
+.carousel_radio:nth-child(3):checked ~ .carousel .carousel_dots .carousel_dot:nth-child(3)
+{
+    background-color: white;
+}
+
+
+.carousel_dots {
+    text-align: center;
+    margin-top: -35px;
+}
+.carousel_dots .carousel_dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50rem;
+    background-color: purple;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.carousel_dots .carousel_dot:not(:last-child) {
+    margin-right: 0;
+}
+.carousel_dots .carousel_dot:hover {
+    background-color: gray;
+}

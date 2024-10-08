@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .container {
+            width: 800px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card {
+            width: 500%;
+            height: 500px;
+            display: flex;
+            background-color: red;
+        }
+
+        .card input {
+            display: none;
+        }
+
+        .card .image {
+            width: 20%;
+            transition: 2s;
+        }
+
+        .card .image img {
+            width: 800px;
+            height: 500px;
+        }
+
+        .card .navigasi {
+            position: absolute;
+            width: 800px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card .navigasi .tombol_navigasi {
+            border: 2px solid black;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .tombol_navigasi:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        .tombol_navigasi:hover {
+            background: #de6a23;
+        }
+
+        #radio1:checked~.first {
+            margin-left: 0;
+        }
+
+        #radio2:checked~.first {
+            margin-left: -20%;
+        }
+
+        #radio3:checked~.first {
+            margin-left: -40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- input radio button -->
+            <input type="radio" name="image" id="radio1"><br>
+            <input type="radio" name="image" id="radio2"><br>
+            <input type="radio" name="image" id="radio3"><br>
+
+            <!-- image -->
+            <div class="image first">
+                <img src="foto.jpeg">
+            </div>
+            <div class="image">
+                <img src="one-piece.jpeg">
+            </div>
+            <div class="image">
+                <img src="panda.jpg">
+            </div>
+
+            <!-- Navigasi -->
+            <div class="navigasi">
+                <label for="radio1" class="tombol_navigasi"></label>
+                <label for="radio2" class="tombol_navigasi"></label>
+                <label for="radio3" class="tombol_navigasi"></label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
